@@ -2,11 +2,11 @@
 
     session_start();
 
-    if(!isset($_SESSION['logged']) && $_SESSION['level'] == 1){
+    if(!isset($_SESSION['logged']) && $_SESSION['level'] != 1){
         header('Location: login.php');
     }
 
-    include("database.php");
+    require_once "database.php";
 
     
 

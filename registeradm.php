@@ -20,10 +20,13 @@
     if(!mysqli_query($conn, $sql_code)){
         echo "falha";
     }else{
-        unlink('clientInstall.php');
+        //Deletes files no longer needed and redirects to the login page
+
+
+        /*unlink('clientInstall.php');
         unlink('install.php');
         unlink('registeradm.php');
-        unlink('registeradmform.php');
+        unlink('registeradmform.php');*/
         header("Location: login.php");
     }
  

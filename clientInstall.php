@@ -73,7 +73,7 @@
         <h1 class="pgTitle">Client Area Installer By LukaOliveira</h1>
         <h3 class="pgTitle">github.com/LukaOliveira</h3><br><br>
     </nav>
-    <form action="./install.php" method="POST" id="dbForm">
+    <form action="./configuredb.php" method="POST" id="dbForm">
         <label for="">Hostname of your database: </label><br><input type="text" name="host" required class="inp"><br><br>
         <label for="">Your database name: </label><br><input type="text" name="dbname" required class="inp"><br><br>
         <label for="">Username of your database: </label><br><input type="text" name="dbuser" required class="inp"><br><br>
