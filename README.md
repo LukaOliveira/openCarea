@@ -3,6 +3,10 @@
 <p>A client area with registration control and simple to use and modify, using simple languages such as: HTML, CSS, JavaScript and PHP</p>
 
 # How to install?
+<ol>
+  <li>aaaa</li>
+
+</ol>
 *Download the complete package and extract it on your server / website
 *Access the clientInstall.php file (Exem: mydomain.com/clientInstall.php)
 *You will see this screen:
