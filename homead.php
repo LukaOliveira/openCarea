@@ -18,7 +18,6 @@
     $clients = json_encode($clients);
 
 
-   
     
     if(isset($_POST['env'])){
         $fname =  mysqli_escape_string($conn, $_POST['fname']);

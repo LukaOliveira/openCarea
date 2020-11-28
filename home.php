@@ -8,8 +8,6 @@
 
     require_once "database.php";
 
-    
-
 
 ?>
 <!DOCTYPE html>

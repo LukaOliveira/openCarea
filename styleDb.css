@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 *{
     margin: 0;
     padding: 0;
     font-family: inherit;
 }
-
 body, html{
     background: rgb(26,38,255);
     background: linear-gradient(0deg, rgba(26,38,255,1) 0%, rgba(29,60,255,1) 0%, rgba(49,103,194,1) 100%);

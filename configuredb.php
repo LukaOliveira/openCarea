@@ -41,7 +41,6 @@
         $isFail = "1";
         echo("<script> var isFail = $isFail </script>");
     }
-    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,6 +64,5 @@
         }
         document.getElementsByTagName('head')[0].innerHTML += "<link rel='stylesheet' href='./styleDb.css' type='text/css'></link>"
     </script>
-    
 </body>
 </html>
