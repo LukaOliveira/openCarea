@@ -52,15 +52,18 @@
 </head>
 <body>
     <script>
+        
         if(isFail == 1){
+            document.write('<div id="loginBlock"><img src="./img/logo.png" alt=""><h1 class="pgTitle">By LukaOliveira</h1><h3 class="pgTitle">github.com/LukaOliveira</h3><br><br><hr>')
             document.write("<h1>Database successfully configured!</h1>")
-            document.write("<br><br><a href='registeradmform.php' id='backBtn'>Register an administrator</a>")
+            document.write("<br><br><a href='registeradm.php' id='backBtn'>Register an administrator</a></div>")
         }else{
             document.getElementsByTagName('body')[0].innerHTML = ""
+            document.write('<div id="loginBlock"><img src="./img/logo.png" alt=""><h1 class="pgTitle">By LukaOliveira</h1><h3 class="pgTitle">github.com/LukaOliveira</h3><br><br><hr>')
             document.write("<h1>Failed to connect to the database, check the information!</h1>")
-            document.write("<br><br><a href='clientInstall.php' id='backBtn'>Back to configuration</a>")
+            document.write("<br><br><a href='install.php' id='backBtn'>Back to configuration</a></div>")
         }
-        document.getElementsByTagName('head')[0].innerHTML += "<link rel='stylesheet' href='./style.css' type='text/css'></link>"
+        document.getElementsByTagName('head')[0].innerHTML += "<link rel='stylesheet' href='./styleDb.css' type='text/css'></link>"
     </script>
     
 </body>

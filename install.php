@@ -1,67 +1,28 @@
-<?php
-    $serverName = $_POST["host"];
-    $dataBase = $_POST["dbname"];
-    $username = $_POST["dbuser"];
-    $password = $_POST["dbpass"];
- 
-    $conn = mysqli_connect($serverName, $username, $password, $dataBase);
-    $isFail = "";
-    
-    
-
-    if(!$conn){
-        echo("Failed to connect to the database, check the data entered!: ".mysqli_connect_error());
-        $isFail = "0";
-        echo("<script> var isFail = $isFail </script>");
-    }else{
-        $dbform = '<?php
-        $serverName = "'.$_POST["host"].'";
-        $dataBase = "'.$_POST["dbname"].'";
-        $username = "'.$_POST["dbuser"].'";
-        $password = "'.$_POST["dbpass"].'";
- 
-        $conn = mysqli_connect($serverName, $username, $password, $dataBase);
- 
-        if(!$conn){
-            die("Failed to connect to the database, check the data entered!: ".mysqli_connect_error());
-        }
-        ?>';
-
-        $arquivo = "database.php";
-
-        $opArquivo = fopen($arquivo, "a");
-
-        fwrite($opArquivo, $dbform);
-
-        fclose($opArquivo);
-
-        mysqli_query($conn, "CREATE TABLE users(id int(11) AUTO_INCREMENT, name varchar(30), sname varchar(30), email varchar(60), pass varchar(32), level tinyint(4), caddate datetime(4), PRIMARY KEY (id))");
-
-        mysqli_close($conn);
-        $isFail = "1";
-        echo("<script> var isFail = $isFail </script>");
-    }
-    
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Installing...</title>
+    <title>Install Client Area</title>
+    <link rel="stylesheet" href="./styleInstall.css" type="text/css"></link>
+  
 </head>
 <body>
-    <script>
-        if(isFail == 1){
-            document.write("<h1>Database successfully configured!</h1>")
-            document.write("<br><br><a href='registeradmform.php' id='backBtn'>Register an administrator</a>")
-        }else{
-            document.getElementsByTagName('body')[0].innerHTML = ""
-            document.write("<h1>Failed to connect to the database, check the information!</h1>")
-            document.write("<br><br><a href='clientInstall.php' id='backBtn'>Back to configuration</a>")
-        }
-        document.getElementsByTagName('head')[0].innerHTML += "<link rel='stylesheet' href='./style.css' type='text/css'></link>"
-    </script>
+    <div id="loginBlock">
+    <img src="./img/logo.png" alt="">
+    <h1 class="pgTitle">By LukaOliveira</h1>
+    <h3 class="pgTitle">github.com/LukaOliveira</h3><br><br>
+    <hr>
     
+    <form action="./configuredb.php" method="POST" id="dbForm">
+        <label for="">Hostname: </label><br><input type="text" name="host" required class="inp"><br><br>
+        <label for="">Database name: </label><br><input type="text" name="dbname" required class="inp"><br><br>
+        <label for="">MySql Username: </label><br><input type="text" name="dbuser" required class="inp"><br><br>
+        <label for="">MySql Password: <span class="op">(Optional)</span></label><br><input type="password" name="dbpass" class="inp"><br><br>
+        <input type="submit" id="sub">
+    </form>
+    </div>
+    
+
 </body>
 </html>
