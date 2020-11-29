@@ -5,7 +5,7 @@
 # How to install?
 <ol>
   <li>*Download the complete package and extract it on your server / website</li>
-  <li>*Access the clientInstall.php file (Exem: mydomain.com/clientInstall.php)</li>
+  <li>*Access the clientInstall.php file (Exem: mydomain.com/install.php)</li>
   <li>*You will see this screen:<br><img src="https://i.ibb.co/DKmsC6x/01c.png"></li>
   <li>*Create a new mysql database</li>
   <li>*Enter the requested information and click send</li>
